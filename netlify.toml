@@ -1,0 +1,56 @@
+[build]
+  # Build command (not needed for static site, but good to have)
+  command = "echo 'Static site - no build required'"
+  
+  # Publish directory
+  publish = "."
+
+[build.environment]
+  # Environment variables for build process
+  NODE_VERSION = "18"
+
+# Form handling
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Handle form submissions
+[[redirects]]
+  from = "/contact"
+  to = "/thank-you.html"
+  status = 200
+  conditions = {Role = ["form-submission"]}
+
+# SPA fallback for any missing pages
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; img-src 'self' https: data: blob:; font-src 'self' https: data:;"
+
+# Cache static assets
+[[headers]]
+  for = "/style/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Handle form submissions with Formspree
+[forms]
+  [forms.contact]
+    action = "https://formspree.io/f/xzzrdrgg"
+    method = "POST"

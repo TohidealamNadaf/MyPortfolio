@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tohidealam Nadaf - Modern Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Tohidealam Nadaf</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#edu-exp">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#chatbot" id="chatbot-nav-link">Chatbot</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#edu-exp">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#chatbot">Chatbot</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="intro">
+            <h1>Hi, I am <span class="name">Tohidealam Nadaf</span></h1>
+            <h2 class="typewriter">
+                <span id="typeText"></span>
+                <span class="cursor">|</span>
+            </h2>
+
+            <div class="social-icons home-social-icons">
+                <a href="https://github.com/TohidealamNadaf" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/tohidealam-nadaf" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:tohidealamfnadaf2003@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <div class="resume-button">
+                <a href="#contact" class="download-btn">
+                    <i class="fas fa-user"></i> Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <div class="profile-placeholder">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>
+                    <strong>I am Tohidealam Nadaf</strong><br><br>
+                    A passionate AIML Engineer, Full Stack Developer, and Data Analyst currently pursuing B.Tech in
+                    Artificial Intelligence & Machine Learning. I thrive on building intelligent solutions using data,
+                    algorithms, and cutting-edge technologies to drive real-world impact. Always curious and eager to
+                    innovate!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">Python</div>
+            <div class="skill-card">C++</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">HTML5</div>
+            <div class="skill-card">CSS3</div>
+            <div class="skill-card">React.js</div>
+            <div class="skill-card">Node.js</div>
+            <div class="skill-card">Pandas</div>
+            <div class="skill-card">NumPy</div>
+            <div class="skill-card">Scikit-learn</div>
+            <div class="skill-card">TensorFlow</div>
+            <div class="skill-card">MySQL</div>
+            <div class="skill-card">MongoDB</div>
+            <div class="skill-card">Git</div>
+            <div class="skill-card">REST APIs</div>
+            <div class="skill-card">Machine Learning</div>
+            <div class="skill-card">Deep Learning</div>
+            <div class="skill-card">Problem Solving</div>
+            <div class="skill-card">Microsoft Office Suite</div>
+        </div>
+    </section>
+
+    <!-- Education & Experience Section -->
+    <section id="edu-exp" class="edu-exp-section">
+        <h2 class="section-title">Education & Experience</h2>
+        <div class="tab-switcher">
+            <button class="tab-button active" data-tab="edu">Education</button>
+            <button class="tab-button" data-tab="exp">Experience</button>
+        </div>
+
+        <div class="tab-content active" id="edu">
+            <div class="timeline">
+                <div class="timeline-block">
+                    <h3>B.Tech in AI & ML</h3>
+                    <span class="institution">D. Y. Patil Agriculture and Technical University</span>
+                    <span class="duration">Pursuing (2023 - Present)</span>
+                    <p>Currently pursuing Bachelor's in Artificial Intelligence and Machine Learning with focus on ML
+                        models, full-stack apps and data analysis.</p>
+                </div>
+
+                <div class="timeline-block">
+                    <h3>Diploma in Computer Engineering</h3>
+                    <span class="institution">Sharad Institute of Technology Polytechnic</span>
+                    <span class="duration">2020 - 2023</span>
+                    <p>Built core skills in programming, databases, and software engineering.</p>
+                </div>
+
+                <div class="timeline-block">
+                    <h3>High School (SSC)</h3>
+                    <span class="institution">Jaysingpur Anglo Urdu High School</span>
+                    <span class="duration">Completed 2020</span>
+                    <p>Completed SSC with foundational skills in science and mathematics.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="exp">
+            <div class="timeline">
+                <div class="timeline-block">
+                    <h3>Data Science and Machine Learning Intern</h3>
+                    <span class="institution">Remote Internship</span>
+                    <span class="duration">July 2022 – August 2024</span>
+                    <p>Developed machine learning models, worked with data pipelines and NLP tasks. Gained hands-on experience with Python, TensorFlow, and data analysis techniques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">EmotionSense – Real-Time Chat with Emotion Detection</h3>
+                        <p class="project-description">Built a full stack real-time chat app with integrated emotion
+                            detection using NLP. Features include real-time messaging, emotion analysis, and responsive design.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>NLP</span>
+                            <span>WebSocket</span>
+                            <span>Machine Learning</span>
+                        </div>
+                        <a href="https://github.com/TohidealamNadaf" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Smart Waste Classification</h3>
+                        <p class="project-description">AI-powered waste classification system using computer vision to automatically categorize different types of waste materials for better recycling processes.</p>
+                        <div class="project-tech">
+                            <span>Computer Vision</span>
+                            <span>TensorFlow</span>
+                            <span>Python</span>
+                            <span>Image Processing</span>
+                        </div>
+                        <a href="https://github.com/TohidealamNadaf" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Skin Disease Recognition and Medical Solutions</h3>
+                        <p class="project-description">Developed a web-based AI tool for skin disease recognition using a CNN model on the HAM10000 dataset, providing instant predictions and medical insights through a Flask backend.</p>
+                        <div class="project-tech">
+                            <span>Deep Learning</span>
+                            <span>CNN</span>
+                            <span>Flask</span>
+                            <span>Medical AI</span>
+                        </div>
+                        <a href="https://github.com/TohidealamNadaf/Skin_Disease_Recognition_System.git" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Toggle Button -->
+    <button id="chatbot-toggle" class="chatbot-toggle" aria-label="Open Chatbot">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Chatbot Container -->
+    <div id="chatbot-container" class="chatbot-container hidden">
+        <div class="chatbot-header">
+            <h3>Chat with Me</h3>
+            <button id="chatbot-close" class="chatbot-close" aria-label="Close Chatbot">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages">
+            <div class="message bot">Hi there! How can I assist you today?</div>
+        </div>
+        <form id="chatbot-form" class="chatbot-form">
+            <input type="text" name="message" placeholder="Type your message..." required autocomplete="off" />
+            <button type="submit" aria-label="Send message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle">Open to collaboration and new opportunities 📧</p>
+            <form action="https://formspree.io/f/xzzrdrgg" method="POST" class="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required autocomplete="name" />
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required autocomplete="email" />
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Tohidealam Nadaf</h3>
+                <p>Passionate AIML Engineer and Full Stack Developer dedicated to building impactful solutions with cutting-edge technology.</p>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/tohidealam-nadaf" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/TohidealamNadaf" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:tohidealamfnadaf2003@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Get In Touch</h3>
+                <p><i class="fas fa-envelope"></i> tohidealamfnadaf2003@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Available for Remote Work</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tohidealam Nadaf. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
