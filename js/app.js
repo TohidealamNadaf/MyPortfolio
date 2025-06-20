@@ -362,14 +362,22 @@ elementsToAnimate.forEach(el => {
 // Navbar Background on Scroll
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    
     if (window.scrollY > 100) {
-        nav.style.backgroundColor = getComputedStyle(document.documentElement)
-            .getPropertyValue('--nav-bg-light');
-        nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+        nav.style.backgroundColor = isDarkMode 
+            ? getComputedStyle(document.documentElement).getPropertyValue('--nav-bg-dark')
+            : getComputedStyle(document.documentElement).getPropertyValue('--nav-bg-light');
+        nav.style.boxShadow = isDarkMode 
+            ? '0 2px 20px rgba(0,0,0,0.4)'
+            : '0 2px 20px rgba(0,0,0,0.1)';
     } else {
-        nav.style.backgroundColor = getComputedStyle(document.documentElement)
-            .getPropertyValue('--nav-bg-light');
-        nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+        nav.style.backgroundColor = isDarkMode 
+            ? getComputedStyle(document.documentElement).getPropertyValue('--nav-bg-dark')
+            : getComputedStyle(document.documentElement).getPropertyValue('--nav-bg-light');
+        nav.style.boxShadow = isDarkMode 
+            ? '0 2px 15px rgba(0,0,0,0.3)'
+            : '0 2px 10px rgba(0,0,0,0.05)';
     }
 });
 
