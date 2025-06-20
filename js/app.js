@@ -20,6 +20,9 @@ if (themeToggle) {
             ? '<i class="fas fa-sun"></i>' 
             : '<i class="fas fa-moon"></i>';
         
+        // Update navigation bar immediately
+        updateNavbarTheme();
+        
         // Save theme preference
         localStorage.setItem('darkMode', isDarkMode);
     });
@@ -29,6 +32,22 @@ if (themeToggle) {
     if (savedTheme === 'true') {
         document.body.classList.add('dark-mode');
         themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        // Update navbar on initial load
+        setTimeout(updateNavbarTheme, 100);
+    }
+}
+
+// Function to update navbar theme
+function updateNavbarTheme() {
+    const nav = document.querySelector('nav');
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    
+    if (isDarkMode) {
+        nav.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--nav-bg-dark');
+        nav.style.boxShadow = '0 2px 15px rgba(0,0,0,0.3)';
+    } else {
+        nav.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--nav-bg-light');
+        nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
     }
 }
 

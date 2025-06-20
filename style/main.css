@@ -190,7 +190,8 @@ body.dark-mode .menu-btn:hover {
 }
 
 body.dark-mode .mobile-menu {
-  background-color: var(--nav-bg-dark);
+  background-color: var(--card-bg);
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .mobile-menu.open {
@@ -310,6 +311,10 @@ body.dark-mode .social-icons a:hover {
 .resume-button {
   opacity: 0;
   animation: fadeInUp 1s ease 1.5s forwards;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .download-btn {
@@ -324,12 +329,25 @@ body.dark-mode .social-icons a:hover {
   border-radius: var(--border-radius);
   transition: var(--transition);
   box-shadow: var(--shadow-light);
+  text-decoration: none;
 }
 
 .download-btn:hover {
   background-color: var(--green-dark);
   transform: translateY(-2px);
   box-shadow: var(--shadow-medium);
+  color: white;
+}
+
+.resume-btn {
+  background-color: transparent;
+  color: var(--green-accent);
+  border: 2px solid var(--green-accent);
+}
+
+.resume-btn:hover {
+  background-color: var(--green-accent);
+  color: white;
 }
 
 /* Animation Keyframes */
@@ -1163,6 +1181,17 @@ body.dark-mode .form-group textarea {
   .projects-section,
   .contact-section {
     padding: 3rem 1rem;
+  }
+
+  .resume-button {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .download-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
   }
 }
 
