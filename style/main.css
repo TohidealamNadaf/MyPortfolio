@@ -546,6 +546,7 @@ body.dark-mode .edu-exp-section {
 .tab-content {
   display: none;
   animation: fadeIn 0.5s ease-in;
+  text-align: left;
 }
 
 .tab-content.active {
