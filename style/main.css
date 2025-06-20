@@ -450,6 +450,7 @@ body.dark-mode .skills-section {
   color: var(--green-dark);
   font-weight: 600;
   position: relative;
+  text-align: center;
 }
 
 body.dark-mode .section-title {
@@ -510,6 +511,7 @@ body.dark-mode .skill-card:hover {
 .edu-exp-section {
   padding: 5rem 2rem;
   background: linear-gradient(135deg, #ffffff 0%, var(--green-light) 100%);
+  text-align: center;
 }
 
 body.dark-mode .edu-exp-section {
@@ -638,6 +640,7 @@ body.dark-mode .timeline-block h3 {
 .projects-section {
   padding: 5rem 2rem;
   background-color: var(--nav-bg-light);
+  text-align: center;
 }
 
 body.dark-mode .projects-section {
